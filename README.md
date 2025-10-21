@@ -38,6 +38,39 @@ src/
  ├─ main.tsx         # Punto de entrada
  └─ ...
 
+## Manejo de estado:
+useState
+
+Se usa extensamente para manejar estados locales dentro de componentes.
+
+LoginForm.tsx:
+
+const [dni, setDni] = useState("");
+const [celular, setCelular] = useState("");
+const [error, setError] = useState("");
+const [loading, setLoading] = useState(false);
+
+
+Aquí useState guarda los valores del formulario y los mensajes de error.
+
+Cotizacion.tsx:
+
+const [activeTab, setActiveTab] = useState(1);
+const [selectedPerson, setSelectedPerson] = useState<string | null>(null);
+const [currentSlide, setCurrentSlide] = useState(0);
+
+
+
+Se usa para controlar la tab activa, la persona seleccionada y el slider de planes.
+
+useNavigate (de react-router-dom)
+En LoginForm.tsx, se usa para redirigir al usuario después de un login exitoso:
+
+const navigate = useNavigate();
+if (data?.name && dniClean === "30216147" && celularClean === "5130216147") {
+  navigate("/cotizacion");
+}
+
 ## Desarrollado por
 
 Lourdes Villegas
