@@ -53,6 +53,7 @@ export default function Cotizacion() {
           src={icon3}
           alt="Icono Plan en Casa"
           className="w-8 h-8 object-contain"
+          
         />
       ),
       costo: "$49 al mes",
@@ -73,6 +74,7 @@ export default function Cotizacion() {
           src={icon3}
           alt="Icono Plan en Casa"
           className="w-8 h-8 object-contain"
+          
         />
       ),
       costo: "$45 al mes",
@@ -89,6 +91,7 @@ export default function Cotizacion() {
           src={icon4}
           alt="Icono Plan en Casa"
           className="w-8 h-8 object-contain"
+          
         />
       ),
       costo: "$120 al mes",
@@ -242,7 +245,7 @@ export default function Cotizacion() {
                       </ul>
 
                    
-                      <button className="mt-auto w-full bg-[#FF1C44] text-white font-semibold py-2 rounded-full hover:bg-[#e0153a] transition">
+                      <button className="mt-auto w-full bg-[#FF1C44] text-white font-semibold py-2 rounded-full hover:bg-[#e0153a] transition" aria-label="Seleccionar">
                         Seleccionar
                       </button>
                     </div>
@@ -275,7 +278,7 @@ export default function Cotizacion() {
                           </li>
                         ))}
                       </ul>
-                      <button className="w-full bg-[#FF1C44] text-white font-semibold py-2 rounded-full hover:bg-[#e0153a] transition">
+                      <button className="w-full bg-[#FF1C44] text-white font-semibold py-2 rounded-full hover:bg-[#e0153a] transition" aria-label="seleccionar">
                         Seleccionar
                       </button>
                     </motion.div>
@@ -286,6 +289,7 @@ export default function Cotizacion() {
                     <button
                       onClick={handlePrev}
                       disabled={currentSlide === 0}
+                      aria-label="anterior"
                       className={`w-10 h-10 flex items-center justify-center rounded-full border transition ${currentSlide === 0
                           ? "border-[#A9AFD9] text-[#A9AFD9] cursor-not-allowed"
                           : "border-[#4F4FFF] text-[#4F4FFF] hover:bg-[#EDEFFC]"
@@ -300,6 +304,7 @@ export default function Cotizacion() {
                     <button
                       onClick={handleNext}
                       disabled={currentSlide === planes.length - 1}
+                      aria-label="siguiente"
                       className={`w-10 h-10 flex items-center justify-center rounded-full border transition ${currentSlide === planes.length - 1
                           ? "border-[#A9AFD9] text-[#A9AFD9] cursor-not-allowed"
                           : "border-[#4F4FFF] text-[#4F4FFF] hover:bg-[#EDEFFC]"
